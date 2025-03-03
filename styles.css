@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-bio {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.link-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.link-item:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+}
+
+.link-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Add animation for links */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.link-item {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.link-item:nth-child(1) { animation-delay: 0.1s; }
+.link-item:nth-child(2) { animation-delay: 0.2s; }
+.link-item:nth-child(3) { animation-delay: 0.3s; }
+.link-item:nth-child(4) { animation-delay: 0.4s; }
+.link-item:nth-child(5) { animation-delay: 0.5s; }
